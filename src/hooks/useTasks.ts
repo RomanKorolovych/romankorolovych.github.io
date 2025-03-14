@@ -9,11 +9,13 @@ const useTasks = () => {
   const [tasks, handleSetTasks] = useLocalStorage<Task[]>(TASKS_KEY, [])
 
   const createTask = (payload: TaskPayload) => {
-    handleSetTasks(tasks.concat({
-      ...payload,
-      id: generateId(),
-      creationDate: new Date()
-    }))
+    handleSetTasks(
+      tasks.concat({
+        ...payload,
+        id: generateId(),
+        creationDate: new Date()
+      })
+    )
   }
 
   const updateTask = (id: Task["id"], payload: Partial<TaskPayload>) => {
