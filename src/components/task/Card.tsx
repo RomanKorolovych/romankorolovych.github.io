@@ -1,36 +1,38 @@
 import React from "react"
-import { Status } from "@/types/task"
-
-import { useTasks } from "@/hooks/useTasks"
 
 import { Task } from "@/types/task"
+import { Resolve } from "./Resolve"
 import { Update } from "./Update"
 import { Delete } from "./Delete"
-import { Card as BaseCard, Text, Box, Checkbox } from "@radix-ui/themes"
+import {
+  Card as BaseCard,
+  Text,
+  Box,
+  Heading,
+  Grid,
+  Flex,
+} from "@radix-ui/themes"
 
 export interface TaskCardProps {
   task: Task
 }
 
 export const Card: React.FC<TaskCardProps> = ({ task }) => {
-  const { updateTask } = useTasks()
-
   return (
     <BaseCard>
-      <Checkbox
-        checked={task.status === "DONE"}
-        onCheckedChange={(isChecked) =>
-          updateTask(task.id, {
-            status: isChecked ? Status.DONE : Status.PENDING
-          })
-        }
-      />
+      <Grid columns="1fr 50px">
+        <Heading>{task.name}</Heading>
+      </Grid>
       <Box>
-        <Text>{task.name}</Text>
-        <Text>{task.description}</Text>
+        <Text as="p" style={{ "white-space": "pre-wrap" }}>
+          {task.description}
+        </Text>
       </Box>
-      <Delete id={task.id} />
-      <Update id={task.id} />
+      <Flex gap="3" justify="end">
+        <Resolve id={task.id} />
+        <Delete id={task.id} />
+        <Update id={task.id} />
+      </Flex>
     </BaseCard>
   )
 }

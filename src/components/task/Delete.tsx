@@ -17,5 +17,5 @@ export const Delete: React.FC<UpdateProps> = ({ id }) => {
 
   if (!task) return null
 
-  return <Button onClick={() => deleteTask(id)}>Remove Task</Button>
+  return <Button onClick={() => deleteTask(id)}>Remove</Button>
 }

@@ -23,7 +23,7 @@ export const Update: React.FC<UpdateProps> = ({ id }) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Button>Update Task</Button>
+        <Button>Update</Button>
       </Dialog.Trigger>
 
       <Dialog.Content>
