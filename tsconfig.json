@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es2023",
+    "target": "esnext",
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
     "outDir": "./dist",
     "strict": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src/**/*"]

@@ -26,7 +26,7 @@ export const Card: React.FC<TaskCardProps> = ({ task }) => {
         <Text color="gray">{formatDate(task.creationDate)}</Text>
       </Grid>
       <Box>
-        <Text as="p" style={{ "white-space": "pre-wrap" }}>
+        <Text as="p" style={{ whiteSpace: "pre-wrap" }}>
           {task.description}
         </Text>
       </Box>

@@ -1,5 +1,5 @@
 import React from "react"
-import { Field } from "formik"
+import { Field, FieldProps } from "formik"
 import { TextField } from "@radix-ui/themes"
 
 export interface InputProps {
@@ -14,7 +14,7 @@ export const Input: React.FC<InputProps> = ({
 }) => {
   return (
     <Field name={name}>
-      {({ form, field }) => (
+      {({ form, field }: FieldProps) => (
         <TextField.Root
           {...props}
           value={field.value}

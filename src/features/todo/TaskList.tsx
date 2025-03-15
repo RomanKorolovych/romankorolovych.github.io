@@ -34,7 +34,7 @@ export const TaskList: React.FC<ListProps> = () => {
         <Text align="center" weight="bold" size="5">
           No task matches criteria
         </Text>
-      ) : processed.map((task) => <Task.Card task={task} />)}
+      ) : processed.map((task) => <Task.Card key={task.id} task={task} />)}
     </Flex>
   )
 }

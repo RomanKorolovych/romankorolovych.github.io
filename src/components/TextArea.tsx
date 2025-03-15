@@ -1,5 +1,5 @@
 import React from "react"
-import { Field } from "formik"
+import { Field, FieldProps } from "formik"
 import * as Radix from "@radix-ui/themes"
 
 export interface TextareaProps {
@@ -14,7 +14,7 @@ export const TextArea: React.FC<TextareaProps> = ({
 }) => {
   return (
     <Field name={name}>
-      {({ form, field }) => (
+      {({ form, field }: FieldProps) => (
         <Radix.TextArea
           {...props}
           value={field.value}

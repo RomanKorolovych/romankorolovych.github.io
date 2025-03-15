@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "build": "tsc --noEmit && webpack --mode production",
     "lint:check": "eslint",
     "lint:fix": "eslint",
     "format:check": "npx prettier --check --ignore-path .gitignore .",
