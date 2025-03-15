@@ -10,14 +10,16 @@ import { Formik, Form } from "formik"
 import { Input } from "@/components/Input"
 import { TextArea } from "@/components/TextArea"
 
-export const Create: React.FC = () => {
+export interface CreateProps {
+  children: React.ReactNode | React.ReactNode[]
+}
+
+export const Create: React.FC<CreateProps> = ({ children }) => {
   const { createTask } = useTasks()
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger>
-        <Button>Create Task</Button>
-      </Dialog.Trigger>
+      <Dialog.Trigger>{children}</Dialog.Trigger>
 
       <Dialog.Content>
         <Dialog.Title>What would you like to do?</Dialog.Title>
