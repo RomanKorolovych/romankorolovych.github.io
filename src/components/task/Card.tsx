@@ -1,4 +1,5 @@
 import React from "react"
+import { formatDate } from "@/lib/formatDate"
 
 import { Task } from "@/types/task"
 import { Resolve } from "./Resolve"
@@ -20,8 +21,9 @@ export interface TaskCardProps {
 export const Card: React.FC<TaskCardProps> = ({ task }) => {
   return (
     <BaseCard>
-      <Grid columns="1fr 50px">
+      <Grid columns="1fr 75px">
         <Heading size="5">{task.name}</Heading>
+        <Text color="gray">{formatDate(task.creationDate)}</Text>
       </Grid>
       <Box>
         <Text as="p" style={{ "white-space": "pre-wrap" }}>
