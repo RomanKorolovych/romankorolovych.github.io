@@ -23,7 +23,7 @@ export const Type: React.FC<TypeProps> = () => {
       <Select.Trigger />
       <Select.Content>
         <Select.Group>
-          <Select.Label>Status</Select.Label>
+          <Select.Label>Sort By</Select.Label>
           <Select.Item value={SortingType.DATE}>Date</Select.Item>
           <Select.Item value={SortingType.STATUS}>Status</Select.Item>
         </Select.Group>

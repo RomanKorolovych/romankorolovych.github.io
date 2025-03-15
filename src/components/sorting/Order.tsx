@@ -23,7 +23,7 @@ export const Order: React.FC<OrderProps> = () => {
       <Select.Trigger />
       <Select.Content>
         <Select.Group>
-          <Select.Label>Status</Select.Label>
+          <Select.Label>Sorting Order</Select.Label>
           <Select.Item value={SortingOrder.ASC}>Ascending</Select.Item>
           <Select.Item value={SortingOrder.DESC}>Descending</Select.Item>
         </Select.Group>
