@@ -1,6 +1,7 @@
 import React from "react"
 import { Flex, Text, Grid, Button } from "@radix-ui/themes"
 
+import { TaskList } from "@/features/todo/TaskList"
 import * as Task from "@/components/task"
 import * as Filter from "@/components/filter"
 import * as Sorting from "@/components/sorting"
@@ -23,17 +24,7 @@ export const Todo = () => {
         <Sorting.Type />
         <Sorting.Order />
       </Grid>
-      <Task.List>
-        {({ tasks }) =>
-          tasks.length > 0 ? (
-            tasks.map((task) => <Task.Card task={task} />)
-          ) : (
-            <Text align="center" weight="bold" size="5">
-              Nothing to do... Maybe have a tea?
-            </Text>
-          )
-        }
-      </Task.List>
+      <TaskList />
     </Flex>
   )
 }
