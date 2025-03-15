@@ -38,8 +38,10 @@ export const Update: React.FC<UpdateProps> = ({ id }) => {
           >
             {() => (
               <Form>
-                <Input name="name" placeholder="Name" />
-                <TextArea name="description" placeholder="Description" />
+                <Flex direction="column" gap="3">
+                  <Input name="name" placeholder="Name" />
+                  <TextArea name="description" placeholder="Description" />
+                </Flex>
                 <Flex gap="3" mt="4" justify="end">
                   <Dialog.Close>
                     <Button variant="soft" color="gray">

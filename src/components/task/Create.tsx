@@ -27,8 +27,10 @@ export const Create: React.FC<CreateProps> = ({ children }) => {
           <Formik initialValues={NEW_TASK} onSubmit={createTask}>
             {() => (
               <Form>
-                <Input name="name" placeholder="Name" />
-                <TextArea name="description" placeholder="Description" />
+                <Flex direction="column" gap="3">
+                  <Input name="name" placeholder="Name" />
+                  <TextArea name="description" placeholder="Description" />
+                </Flex>
                 <Flex gap="3" mt="4" justify="end">
                   <Dialog.Close>
                     <Button variant="soft" color="gray">
